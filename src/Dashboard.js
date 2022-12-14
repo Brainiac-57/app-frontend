@@ -7,7 +7,7 @@ import {
 import { Pagination } from '@material-ui/lab';
 import swal from 'sweetalert';
 const axios = require('axios');
-https://user-registration.adaptable.app
+
 
 export default class Dashboard extends Component {
   constructor() {
