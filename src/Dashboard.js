@@ -7,6 +7,7 @@ import {
 import { Pagination } from '@material-ui/lab';
 import swal from 'sweetalert';
 const axios = require('axios');
+https://user-registration.adaptable.app
 
 export default class Dashboard extends Component {
   constructor() {
@@ -50,7 +51,7 @@ export default class Dashboard extends Component {
     if (this.state.search) {
       data = `${data}&search=${this.state.search}`;
     }
-    axios.get(`http://localhost:2000/get-product${data}`, {
+    axios.get(`https://user-registration.adaptable.app/get-product${data}`, {
       headers: {
         'token': this.state.token
       }
@@ -67,7 +68,7 @@ export default class Dashboard extends Component {
   }
 
   deleteProduct = (id) => {
-    axios.post('http://localhost:2000/delete-product', {
+    axios.post('https://user-registration.adaptable.app/delete-product', {
       id: id
     }, {
       headers: {
@@ -126,7 +127,7 @@ export default class Dashboard extends Component {
     file.append('discount', this.state.discount);
     file.append('price', this.state.price);
 
-    axios.post('http://localhost:2000/add-product', file, {
+    axios.post('https://user-registration.adaptable.app/add-product', file, {
       headers: {
         'content-type': 'multipart/form-data',
         'token': this.state.token
@@ -164,7 +165,7 @@ export default class Dashboard extends Component {
     file.append('discount', this.state.discount);
     file.append('price', this.state.price);
 
-    axios.post('http://localhost:2000/update-product', file, {
+    axios.post('https://user-registration.adaptable.app/update-product', file, {
       headers: {
         'content-type': 'multipart/form-data',
         'token': this.state.token
@@ -443,7 +444,7 @@ export default class Dashboard extends Component {
                   <TableCell align="center" component="th" scope="row">
                     {row.name}
                   </TableCell>
-                  <TableCell align="center"><img src={`http://localhost:2000/${row.image}`} width="70" height="70" /></TableCell>
+                  <TableCell align="center"><img src={`https://user-registration.adaptable.app/${row.image}`} width="70" height="70" /></TableCell>
                   <TableCell align="center">{row.desc}</TableCell>
                   <TableCell align="center">{row.price}</TableCell>
                   <TableCell align="center">{row.discount}</TableCell>
